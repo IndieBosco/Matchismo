@@ -21,6 +21,7 @@
 		6935DBC61858122E00B40AA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6935DBA81858122E00B40AA2 /* UIKit.framework */; };
 		6935DBCE1858122E00B40AA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6935DBCC1858122E00B40AA2 /* InfoPlist.strings */; };
 		6935DBD01858122E00B40AA2 /* MatchismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6935DBCF1858122E00B40AA2 /* MatchismoTests.m */; };
+		6935DBDB18582F5700B40AA2 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 6935DBDA18582F5700B40AA2 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		6935DBCB1858122E00B40AA2 /* MatchismoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MatchismoTests-Info.plist"; sourceTree = "<group>"; };
 		6935DBCD1858122E00B40AA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6935DBCF1858122E00B40AA2 /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
+		6935DBD918582F5700B40AA2 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
+		6935DBDA18582F5700B40AA2 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +115,11 @@
 		6935DBAA1858122E00B40AA2 /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
-				6935DBB31858122E00B40AA2 /* CardGameAppDelegate.h */,
-				6935DBB41858122E00B40AA2 /* CardGameAppDelegate.m */,
 				6935DBB61858122E00B40AA2 /* Main.storyboard */,
 				6935DBB91858122E00B40AA2 /* CardGameViewController.h */,
 				6935DBBA1858122E00B40AA2 /* CardGameViewController.m */,
 				6935DBBC1858122E00B40AA2 /* Images.xcassets */,
+				6935DBDC18582F8300B40AA2 /* Model */,
 				6935DBAB1858122E00B40AA2 /* Supporting Files */,
 			);
 			path = Matchismo;
@@ -126,6 +128,8 @@
 		6935DBAB1858122E00B40AA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6935DBB31858122E00B40AA2 /* CardGameAppDelegate.h */,
+				6935DBB41858122E00B40AA2 /* CardGameAppDelegate.m */,
 				6935DBAC1858122E00B40AA2 /* Matchismo-Info.plist */,
 				6935DBAD1858122E00B40AA2 /* InfoPlist.strings */,
 				6935DBB01858122E00B40AA2 /* main.m */,
@@ -150,6 +154,15 @@
 				6935DBCC1858122E00B40AA2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6935DBDC18582F8300B40AA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6935DBDA18582F5700B40AA2 /* Card.m */,
+				6935DBD918582F5700B40AA2 /* Card.h */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +213,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Bosco So";
 				TargetAttributes = {
+					6935DBA01858122E00B40AA2 = {
+						DevelopmentTeam = 395PZE825A;
+					};
 					6935DBC11858122E00B40AA2 = {
 						TestTargetID = 6935DBA01858122E00B40AA2;
 					};
@@ -253,6 +269,7 @@
 				6935DBB51858122E00B40AA2 /* CardGameAppDelegate.m in Sources */,
 				6935DBBB1858122E00B40AA2 /* CardGameViewController.m in Sources */,
 				6935DBB11858122E00B40AA2 /* main.m in Sources */,
+				6935DBDB18582F5700B40AA2 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,10 +396,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,10 +412,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "Matchismo/Matchismo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
